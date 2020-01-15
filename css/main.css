@@ -1,0 +1,839 @@
+/* ========== global styles ============ */
+
+/*
+primary color: #DCB426
+*/
+
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 300;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* buttons */
+
+.main-btn {
+  text-transform: uppercase;
+  padding: 5px 50px;
+  font-size: 1rem;
+  background: #dcb426;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+  border: 2px solid #dcb426;
+  transform: 0.3s ease-in-out all;
+}
+
+.dark-btn:hover {
+  color: #dcb426;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #dcb426;
+}
+
+.light-btn:hover {
+  color: #dcb426;
+  background: transparent;
+  border: 2px solid #dcb426;
+}
+
+.contact-btn {
+  text-transform: uppercase;
+  padding: 5px 50px;
+  font-size: 1rem;
+  background: #dcb426;
+  font-weight: 700;
+  color: #495057;
+  font-family: "Roboto Condensed", sans-serif;
+  border: 2px solid #dcb426;
+  transform: 0.3s ease-in-out all;
+}
+
+/* lines and shapes */
+
+.section-underline {
+  width: 20vw;
+  height: 3px;
+  display: flex;
+  justify-content: center;
+  background: #dcb426;
+  margin: 10px auto 25px auto;
+}
+
+.mobile-underline {
+  width: 100vw;
+  height: 6vh;
+  background: #dcb426;
+  top: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========== animations =========== */
+
+/* -webkit-animation: fadeInFromNone 0.5s ease-out;
+  -moz-animation: fadeInFromNone 0.5s ease-out;
+  -o-animation: fadeInFromNone 0.5s ease-out;
+  animation: fadeInFromNone 0.5s ease-out; */
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+/* ========== nav ============ */
+
+nav {
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  background: #fff;
+  height: 12vh;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  padding-right: 2.5%;
+  right: 0%;
+  height: 30px;
+  width: 100%;
+  background: #000;
+  overflow-x: hidden;
+}
+
+.contact-header p {
+  margin-top: 3px;
+  color: #fff;
+}
+
+.nav-container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  height: 8vh;
+  flex: 0 0 auto;
+}
+
+.btn {
+  padding: 2px;
+  display: inline-block;
+  padding-right: 20px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 4px;
+  margin: 5px;
+  background: black;
+  transition: transform 1s ease, opacity 1s ease;
+  border-radius: 7px;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-7px, -6px);
+}
+
+#main-logo {
+  color: #000;
+  font-weight: 700;
+  padding: 3px;
+  border: 2px solid #dcb426;
+}
+
+.nav-links {
+  position: fixed;
+  top: 12vh;
+  list-style-type: none;
+  display: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  background: #fff;
+  z-index: 8;
+}
+
+.nav-links .main-link {
+  display: block;
+  transform: none !important;
+  font-size: 1.3rem !important;
+  padding: 10px 1px 10px 0px !important;
+  background: transparent;
+  color: #000;
+  font-weight: 700;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  z-index: 1;
+  padding-top: 1.1vh;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 700;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #dcb426;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.nav-links .main-link:hover:before,
+.nav-links a.active:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.active {
+  color: #dcb426 !important;
+}
+
+/* ======= header ========== */
+
+#header-img {
+  height: 85%;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-animation: fadeInFromNone 1.5s ease-in-out;
+  -moz-animation: fadeInFromNone 1.5s ease-in-out;
+  -o-animation: fadeInFromNone 1.5s ease-in-out;
+  animation: fadeInFromNone 1.5s ease-in-out;
+}
+
+#header-img h5 {
+  font-size: 4vw;
+  padding-left: 5vw;
+}
+
+#header-img h1 {
+  font-size: 10vw;
+  padding-left: 5vw;
+}
+
+.header-underline {
+  width: 60%;
+  margin-left: 22vw;
+  height: 3px;
+  background: #dcb426;
+  margin-bottom: 2vh;
+}
+
+#header-img p {
+  font-size: 3vw;
+  padding-left: 8vw;
+}
+
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/front.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-btns {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-btn {
+  margin: 10px;
+  justify-content: center;
+  margin: 10px auto;
+  width: 70%;
+}
+
+/* ======== about ============ */
+
+#about {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* ======== header-2 ======== */
+
+.header-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/pool.jpg) center/cover fixed;
+  /* height: auto; */
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-2 h5 {
+  padding-left: 17vw;
+  font-size: 3vw;
+}
+
+.header-2 h1 {
+  padding-left: 17vw;
+  font-size: 6vw;
+}
+
+.header-2-underline {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 3px;
+  background: #dcb426;
+  margin: 3vh auto;
+}
+
+.header-2 a {
+  margin: 60px auto;
+}
+
+/* ======== discover villa vicente =========== */
+
+.villa-parent {
+  width: 350px;
+  height: 350px;
+  min-height: 300px;
+  margin: 10px auto;
+  overflow: hidden;
+  /* box-sizing: border-box!important; */
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.villa-block {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+}
+
+.villa-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/mustang.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.villa-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/garden2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.villa-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/bar.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* villa-4 only on about page */
+
+.villa-4 {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/barcelona.jpg");
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+}
+.villa-parent:hover .villa-block,
+.villa-parent:focus .villa-block {
+  transform: scale(1.2);
+}
+
+.villa-block::before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: inherit;
+}
+
+.villa-parent:hover .villa-block:before,
+.villa-parent:focus .villa-block:before {
+  display: block;
+}
+
+.discover-text {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+/* ======= homepage responsive ====== */
+
+@media screen and (min-width: 768px) {
+  .villa-parent {
+    width: 30% !important;
+    height: 30vh !important;
+    margin: 10px;
+    padding: 0 !important;
+    min-height: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 30%;
+  }
+
+  .discover-text {
+    font-size: 2rem;
+  }
+
+  .header-btns {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .header-btn {
+    width: 25%;
+    margin: 2vh 2vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .btn {
+    display: none;
+  }
+
+  .header-logo {
+    left: 5%;
+    z-index: 10;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    display: flex !important;
+    background: transparent;
+    top: 6vh;
+    flex: 1 0 auto;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 1vw;
+  }
+
+  .nav-links .main-link {
+    display: block;
+    transform: none !important;
+    font-size: 1rem !important;
+    padding: 5px 20px 4px 20px !important;
+
+    background: transparent;
+    font-size: 12px;
+    text-decoration: none;
+    transition: var(--mainTransition);
+  }
+
+  .nav-links a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--darkBlue);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .main-link:hover {
+    color: #dcb426 !important;
+  }
+
+  .villa-parent {
+    height: 45vh !important;
+  }
+}
+
+/* ====== discover the area ====== */
+
+.area-parent {
+  width: 80vw;
+  height: 50vh;
+  min-height: 300px;
+  margin: 10px auto;
+  overflow: hidden;
+  padding: 0 15px !important;
+}
+
+.area-1 {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/canyelles.jpg");
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+  padding: 0 15px;
+}
+
+.area-2 {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/sitges.jpg");
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.area-3 {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/vilanova.jpg");
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.area-4 {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/barcelona.jpg");
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  background-color: #dcb426;
+  overflow: hidden;
+  width: calc(100% - 30px);
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.area-1:hover .overlay {
+  height: 100%;
+}
+
+.area-1:hover span {
+  transform: translateY(-300px);
+}
+
+.area-1 span {
+  transition: 0.5s ease;
+}
+
+.area-2:hover .overlay {
+  height: 100%;
+}
+
+.area-2:hover span {
+  transform: translateY(-300px);
+}
+
+.area-2 span {
+  transition: 0.5s ease;
+}
+
+.area-3:hover .overlay {
+  height: 100%;
+}
+
+.area-3:hover span {
+  transform: translateY(-300px);
+}
+
+.area-3 span {
+  transition: 0.5s ease;
+}
+
+.area-4:hover .overlay {
+  height: 100%;
+}
+
+.area-4:hover span {
+  transform: translateY(-300px);
+}
+
+.area-4 span {
+  transition: 0.5s ease;
+}
+
+.small-underline {
+  height: 1px;
+  width: 40%;
+  background: #000;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.area-title {
+  margin-top: 20px;
+}
+
+.area-text {
+  line-height: 2;
+  max-width: 70%;
+  justify-content: center;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.area-btn {
+  margin: 30px auto;
+  display: flex;
+  width: 75vw;
+  max-width: 476px;
+}
+
+/* ========== availability ============ */
+
+#availability {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/terracefront.jpg) center/cover fixed;
+}
+
+.availability-checker {
+  top: 20%;
+  width: 50%;
+  height: 70%;
+}
+
+/* =========== footer ============== */
+
+#footer {
+  background: #000;
+}
+
+.footer-links a {
+  color: white;
+}
+
+/* =========== about page =============== */
+
+#about-header {
+  height: 100vh;
+}
+
+.about-header-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/terracefront.jpg) center/cover fixed;
+}
+
+.about-header-text {
+  padding-top: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.about-header-text .section-underline {
+  margin: 0;
+}
+
+#about-info {
+  width: 100%;
+  height: auto;
+}
+
+.about-info-text {
+  margin-top: 10vh !important;
+  line-height: 1.8;
+}
+
+.about-row {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+/* ======== villa page ======= */
+
+.villa-header-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/forestview.jpg) center/cover fixed;
+}
+
+/* ======== area page ======= */
+
+.area-header-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/sitges.jpg) center/cover fixed;
+}
+
+/* ======== gallery ======= */
+
+.gallery-header {
+  padding-top: 10vh;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
